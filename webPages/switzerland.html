@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switzerland</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro-text {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .intro-text h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .intro-text p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .photo-section {
+            margin: 3rem 0;
+        }
+    
+        .photo-container{
+            height: 50%;
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .photo-caption {
+            margin-top: 1rem;
+        }
+
+        .photo-caption h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        .photo-caption p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .grid-caption {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Switzerland</h1>
+        <p>Summer 2024</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-text">
+            <h2>About This Trip</h2>
+            <p>Iz and I went to Europe to celebrate the end of her residency! It was an unforgettable experience!</p>
+            <p>In Switzerland, we went to Montreux, Zurich, Interlaken, and Grindelwald. </p>
+        </div>
+
+        <!-- Featured Photo Section -->
+        <div class="photo-section">
+            <div class="photo-container">
+                    <img src="../photos/switzerland/TheFamousCow.jpeg" alt="The Famouse Cow in Grindelwald">
+                <div class="photo-caption">
+                    <h3>The Famous Cow in Grindelwald</h3>
+                    <p>Iz took this photo and it deserves to be in National Geographic</p>
+                </div>
+            </div>
+
+            <div class="photo-container">
+                <img src="../photos/switzerland/IzRocher.jpeg" alt="Iz at the top of Rocher de Naye">
+                <div class="photo-caption">
+                    <h3>Iz at the top of Rocher de Naye</h3>
+                    <p>This hike was more than we realized, but the view was worth it!</p>
+                </div>
+            </div>
+
+            <div class="photo-container">
+                <img src="../photos/switzerland/ZurichCity2.jpeg" alt="the city of Zurich">
+                <div class="photo-caption">
+                    <h3>The Beautiful City of Zurich</h3>
+                    <p>It was wonderful to walk around Zurich together! It's a beautiful place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Grid Section -->
+        <div class="intro-text">
+            <h2>Other Highlights of the Trip</h2>
+            <p>Here is a collection of photos from our trip!</p>
+        </div>
+
+        <div class="photo-grid">
+            <div class="grid-item">
+                <img src="../photos/switzerland/Chillon2.jpeg">
+                <p class="grid-caption">The Chateau de Chillon in Montreux</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/switzerland/ZurichFlags.jpeg">
+                <p class="grid-caption">The Swiss flags in Zurich</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/switzerland/GrindelwaldLake.jpeg">
+                <p class="grid-caption">Another scenic view in Grindelwald</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/switzerland/harderKulmStatue.jpeg">
+                <p class="grid-caption">An adorable statue we found in Interlaken</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/switzerland/Jose.jpeg">
+                <p class="grid-caption">I ran into a friend from back home! What a coincidence!</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/switzerland/Hallo.jpeg">
+                <p class="grid-caption">Hallo</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 - Blake Burchett</p>
+        <a href="index.html">Return to Home</a>
+    </footer>
+</body>
+</html>

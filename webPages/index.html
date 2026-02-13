@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Adventures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 4rem 2rem 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .intro-section {
+            background-color: #fff;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .trips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .trip-card {
+            background-color: #fff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+
+        .trip-image {
+            width: 100%;
+            height: 250px;
+            background-color: #e8e8e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+
+        .trip-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .trip-content {
+            padding: 1.5rem;
+        }
+
+        .trip-date {
+            font-size: 0.85rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .trip-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2c2c2c;
+            margin-bottom: 0.75rem;
+        }
+
+        .trip-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .upcoming-section {
+            background-color: #fff;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .upcoming-section h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+            text-align: center;
+        }
+
+        .upcoming-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .upcoming-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .upcoming-item:last-child {
+            border-bottom: none;
+        }
+
+        .upcoming-destination {
+            font-size: 1.1rem;
+            color: #2c2c2c;
+        }
+
+        .upcoming-date {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .edit-note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            color: #856404;
+            font-size: 0.9rem;
+            border-radius: 2px;
+        }
+
+        .edit-note strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .trips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Travel Adventures</h1>
+        <p>Exploring the world, one journey at a time</p>
+    </header>
+
+    <div class="container">
+        <div class="edit-note">
+            <strong>📝 How to use this index:</strong>
+            For each trip, add a trip card with a cover photo and description. Update the href="#" in each &lt;a&gt; tag to link to your trip pages (e.g., href="vacation-photos.html").
+        </div>
+
+        <div class="intro-section">
+            <h2>Welcome to My Travel Journal</h2>
+            <p>Replace this with your personal introduction. Share what travel means to you and what inspires your adventures around the world.</p>
+        </div>
+
+        <!-- Past Trips Grid -->
+        <div class="trips-grid">
+            <!-- Trip Card 1 - Template -->
+            <a href="switzerland.html" class="trip-card">
+                <img src="../photos/switzerland/GrindelwaldMountains.jpeg">
+                <div class="trip-content">
+                    <div class="trip-date">Summer 2024</div>
+                    <h3 class="trip-title">Switzerland</h3>
+                    <p class="trip-description">A brief description of your trip. What made it memorable? What were the highlights?</p>
+                </div>
+            </a>
+
+            <!-- Trip Card 2 - Template -->
+            <a href="amsterdam.html" class="trip-card">
+                <img src="../photos/amsterdam/PerfectCanal.jpeg">
+                <div class="trip-content">
+                    <div class="trip-date">Summer 2024</div>
+                    <h3 class="trip-title">Amsterdam</h3>
+                    <p class="trip-description">A brief description of your trip.</p>
+                </div>
+            </a>
+
+            <!-- Trip Card 3 - Template -->
+            <a href="#" class="trip-card">
+                <div class="trip-image">
+                    Cover Photo
+                </div>
+                <div class="trip-content">
+                    <div class="trip-date">Month Year</div>
+                    <h3 class="trip-title">Destination Name</h3>
+                    <p class="trip-description">A brief description of your trip.</p>
+                </div>
+            </a>
+
+            <!-- Trip Card 4 - Template -->
+            <a href="#" class="trip-card">
+                <div class="trip-image">
+                    Cover Photo
+                </div>
+                <div class="trip-content">
+                    <div class="trip-date">Month Year</div>
+                    <h3 class="trip-title">Destination Name</h3>
+                    <p class="trip-description">A brief description of your trip.</p>
+                </div>
+            </a>
+
+            <!-- Trip Card 5 - Template -->
+            <a href="#" class="trip-card">
+                <div class="trip-image">
+                    Cover Photo
+                </div>
+                <div class="trip-content">
+                    <div class="trip-date">Month Year</div>
+                    <h3 class="trip-title">Destination Name</h3>
+                    <p class="trip-description">A brief description of your trip.</p>
+                </div>
+            </a>
+
+            <!-- Trip Card 6 - Template -->
+            <a href="#" class="trip-card">
+                <div class="trip-image">
+                    Cover Photo
+                </div>
+                <div class="trip-content">
+                    <div class="trip-date">Month Year</div>
+                    <h3 class="trip-title">Destination Name</h3>
+                    <p class="trip-description">A brief description of your trip.</p>
+                </div>
+            </a>
+
+            <!-- Add more trip cards as needed by copying the template above -->
+        </div>
+
+        <!-- Upcoming Trips Section (Optional) -->
+        <div class="upcoming-section">
+            <h2>Upcoming Adventures</h2>
+            <div class="upcoming-list">
+                <div class="upcoming-item">
+                    <span class="upcoming-destination">Destination Name</span>
+                    <span class="upcoming-date">Month Year</span>
+                </div>
+                <div class="upcoming-item">
+                    <span class="upcoming-destination">Destination Name</span>
+                    <span class="upcoming-date">Month Year</span>
+                </div>
+                <div class="upcoming-item">
+                    <span class="upcoming-destination">Destination Name</span>
+                    <span class="upcoming-date">Month Year</span>
+                </div>
+                <!-- Add or remove items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 - Your Name | Wandering the World</p>
+    </footer>
+</body>
+</html>
