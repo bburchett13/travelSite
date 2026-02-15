@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro-text {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .intro-text h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .intro-text p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .photo-section {
+            margin: 3rem 0;
+        }
+    
+        .photo-container{
+            height: 50%;
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .photo-caption {
+            margin-top: 1rem;
+        }
+
+        .photo-caption h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        .photo-caption p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .grid-item {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .grid-caption {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>London</h1>
+        <p>Summer 2024</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-text">
+            <h2>About This Trip</h2>
+            <p>Iz and I went to Europe to celebrate the end of her residency! It was an unforgettable experience!</p>
+            <p>In London, we saw the sights and visited our friends Adam and Josh! </p>
+        </div>
+
+        <!-- Featured Photo Section -->
+        <div class="photo-section">
+            <div class="photo-container">
+                    <img src="../photos/london/OnTheThames.jpeg">
+                <div class="photo-caption">
+                    <h3>Iz and I on the Thames</h3>
+                    <p>Adam and Josh took us on a tour of London!</p>
+                </div>
+            </div>
+
+            <div class="photo-container">
+                <img src="../photos/london/WestminsterPalace.jpeg">
+                <div class="photo-caption">
+                    <h3>Westminster Palace</h3>
+                    <p>We got to see Westminster Palace on our tour!</p>
+                </div>
+            </div>
+
+            <div class="photo-container">
+                <img src="../photos/london/BritishMuseum.jpeg">
+                <div class="photo-caption">
+                    <h3>The British Museum</h3>
+                    <p>The British Museum has an incredible collection of history</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Grid Section -->
+        <div class="intro-text">
+            <h2>Other Highlights of the Trip</h2>
+            <p>Here is a collection of photos from our trip!</p>
+        </div>
+
+        <div class="photo-grid">
+            <div class="grid-item">
+                <img src="../photos/london/LondonBridge.jpeg">
+                <p class="grid-caption">The London Bridge</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/london/TowerOfLondon.jpeg">
+                <p class="grid-caption">The Tower of London</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/london/PhoneBooth.jpeg">
+                <p class="grid-caption">A phone booth!</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/london/Strawberries.jpeg">
+                <p class="grid-caption">Strawberries from Burrough Market!</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/london/LondonEye.jpeg">
+                <p class="grid-caption">The London Eye!</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="../photos/london/BeerGarden.jpeg">
+                <p class="grid-caption">In a Beer Garden!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 - Blake Burchett</p>
+        <a href="../index.html">Return to Home</a>
+    </footer>
+</body>
+</html>
